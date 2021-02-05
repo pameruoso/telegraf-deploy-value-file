@@ -162,6 +162,18 @@ config:
         url: "https://$HOSTIP:10250"
         bearer_token: "/var/run/secrets/kubernetes.io/serviceaccount/token"
         insecure_skip_verify: true
+        namespace: ""
+        resource_include:
+          - deployments
+          - nodes
+          - statefulsets
+          - daemonsets
+          - endpoints
+          - ingress
+          - persistentvolumes
+          - persistentvolumeclaims
+          - pods
+          - services
 metrics:
   health:
     enabled: false
